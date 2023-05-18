@@ -538,7 +538,6 @@ bool EditContent::Action(){ // type : 1-Check exist 2-Delete 3-Change 4-export
 
     //Function below is to divide content into three parts
     auto Fun = [](string put){
-        //cout <<put <<"---\n";
         vector<string> info; int index = 0;
         while(info.size() != 4){
             string Use;
@@ -592,7 +591,7 @@ bool EditContent::Action(){ // type : 1-Check exist 2-Delete 3-Change 4-export
             new_ff << Origin; new_ff.close();
             return true;
         }
-        
+
         ofstream ofs;
         ofs.open(PATH, ofstream::out | ofstream::trunc);
         ofs.flush(); ofs << Change;
@@ -634,5 +633,6 @@ Delete::Delete(string ID) {
     ID = accountEncryption(ID);
     info.push_back(ID); type = 2;
 }
+
 ```
 
